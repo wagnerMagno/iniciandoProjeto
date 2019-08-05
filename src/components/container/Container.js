@@ -18,9 +18,24 @@ export default class Container extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            heightTotal: true
+            heightTotal: true, 
+            width: 0, 
+            height: 0 
         }
 
+        this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
+
+    }
+
+
+    componentDidMount() {
+        this.updateWindowDimensions();
+        window.addEventListener('resize', this.updateWindowDimensions);
+    }
+
+
+    updateWindowDimensions() {
+        this.setState({ width: window.innerWidth, height: window.innerHeight });
     }
 
     setHeight(props) {
@@ -35,6 +50,8 @@ export default class Container extends React.Component {
 
     render() {
         const SwitchComponent = SwitchWithSlide;
+
+        console.log("wag ", this.state.width);
 
         return (
             <React.Fragment>
@@ -67,7 +84,7 @@ export default class Container extends React.Component {
 
                         <Route
                             path="/"
-                            render={() => this.setHeight("/")}
+                            render={() => { if (this.state.width < 700) { this.setHeight() } else this.setHeight("/") }}
                         />
                     </SwitchComponent>
                 </ContainerComponentStyled>
