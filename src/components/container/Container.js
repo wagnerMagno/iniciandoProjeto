@@ -4,6 +4,7 @@ import { Route } from "react-router-dom";
 import "./styles.css";
 import SwitchWithSlide from "../switchWithSlide/SwitchWithSlide.js";
 import ContainerComponentStyled from "./ContainerComponentStyled";
+import MenuFlutuante from "../menuflutuante/MenuFlutuante";
 
 
 const cssHeigth = {
@@ -51,8 +52,6 @@ export default class Container extends React.Component {
     render() {
         const SwitchComponent = SwitchWithSlide;
 
-        console.log("wag ", this.state.width);
-
         return (
             <React.Fragment>
                 <ContainerComponentStyled className={this.props.className} style={this.state.heightTotal ? cssHeightTotal : cssHeigth}>
@@ -84,7 +83,12 @@ export default class Container extends React.Component {
 
                         <Route
                             path="/"
-                            render={() => { if (this.state.width < 700) { this.setHeight() } else this.setHeight("/") }}
+                            render={() => { 
+                                
+                                return (
+                                    <MenuFlutuante></MenuFlutuante>
+                                )
+                            }}
                         />
                     </SwitchComponent>
                 </ContainerComponentStyled>

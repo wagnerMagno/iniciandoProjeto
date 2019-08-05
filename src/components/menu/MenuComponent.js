@@ -3,6 +3,7 @@ import MenuComponentStyled from "./MenuStyled";
 
 import { Link, Redirect } from "react-router-dom";
 import { runInThisContext } from "vm";
+import MenuFlutuante from "../menuflutuante/MenuFlutuante";
 
 
 export default class MenuComponent extends React.Component {
@@ -20,7 +21,6 @@ export default class MenuComponent extends React.Component {
     }
 
     render() {
-        console.log("this.state.route ", this.props.route);
         if(this.props.route !== ""){
             return <Redirect to={this.props.route}/> 
         }
@@ -31,16 +31,20 @@ export default class MenuComponent extends React.Component {
                     Menu
                 </h2>
 
-                <div  className="link" onClick={() => this.animatioMenu("/")}>
-                    Home
-                </div>
+                <MenuFlutuante animatioMenu={this.animatioMenu}></MenuFlutuante>
+                <div style={{position: "absolute", bottom: "15px"}}>
 
-                <div className="link"  onClick={() => this.animatioMenu("/o-que-fazemos")}>
-                    O que fazemos?
-                </div>
+                    <div  className="link" onClick={() => this.animatioMenu("/")}>
+                        Home
+                    </div>
 
-                <div className="link" onClick={() => this.animatioMenu("/quem-somos")}>
-                    Quem Somos?
+                    <div className="link"  onClick={() => this.animatioMenu("/o-que-fazemos")}>
+                        O que fazemos?
+                    </div>
+
+                    <div className="link" onClick={() => this.animatioMenu("/quem-somos")}>
+                        Quem Somos?
+                    </div>
                 </div>
             </MenuComponentStyled>
         )

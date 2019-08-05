@@ -17,28 +17,14 @@ const MenuComponentStyled = styled.div`
         text-align : center;
     }
 
-    a{
-        text-decoration: none;
-        color: white;
-        display: block;
-        padding: 8px;
-        font-size: 20px;
-    }
     .link{
         text-decoration: none;
         color: white;
-        display: block;
+        display: inline;
         padding: 8px;
         font-size: 20px;
     }
 
-    a:hover{
-        background-color: #a9c5bd;
-        margin-left: -9px;
-        margin-right: -9px;
-        padding: 10px;
-        border-radius: 13px;
-    }
     .link:hover{
         background-color: #a9c5bd;
         margin-left: -9px;
