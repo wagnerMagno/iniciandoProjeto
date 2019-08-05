@@ -34,6 +34,7 @@ export default class VideoComponent extends React.Component {
             autoPlay: true,
             loop: true,
             muted : true, 
+            playsinline : true,
             onClick: () => {
                 if (this.videoRef && this.videoRef.paused) {
                     this.videoRef.play();
