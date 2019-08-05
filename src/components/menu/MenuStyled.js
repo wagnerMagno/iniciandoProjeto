@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 const MenuComponentStyled = styled.div`
     height: 98%;
-    background-color: rgba(120,165,157,0.9);
+    background-color: rgba(120,165,157);
     width: 100%;
     float: left;
     color: white;
