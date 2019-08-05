@@ -31,3 +31,16 @@
     transform: rotate(360deg);
   }
 }
+
+
+.display-none{
+  display: none !important;
+}
+
+.display-block{
+  display: block !important;
+}
+.display-absolute{
+  display: absolute !important;
+}
+
