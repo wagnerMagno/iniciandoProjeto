@@ -18,7 +18,8 @@ export default class VideoComponent extends React.Component {
 
 
     componentDidMount() {
-
+        document.getElementById("teste").children[0].setAttribute("playsinline", "")
+        document.getElementById("teste").children[0].setAttribute("muted", "")
     }
 
     render() {
