@@ -19,7 +19,7 @@ const ContainerComponentStyled = styled.div`
   
     .link {
         color: white;
-        background: rgba(38, 38, 38, 0.4);
+        background: rgba(38, 38, 38, 0.8);
         border-radius: 3px;
         display: flex;
         align-items: center;

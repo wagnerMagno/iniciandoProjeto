@@ -4,7 +4,7 @@ import styled from 'styled-components'
 const MenuComponentStyled = styled.div`
     height: 98%;
     background-color: rgba(120,165,157);
-    width: 100%;
+    width: 98.5%;
     float: left;
     color: white;
     font-weight: 600;
@@ -24,6 +24,13 @@ const MenuComponentStyled = styled.div`
         padding: 8px;
         font-size: 20px;
     }
+    .link{
+        text-decoration: none;
+        color: white;
+        display: block;
+        padding: 8px;
+        font-size: 20px;
+    }
 
     a:hover{
         background-color: #a9c5bd;
@@ -31,6 +38,19 @@ const MenuComponentStyled = styled.div`
         margin-right: -9px;
         padding: 10px;
         border-radius: 13px;
+    }
+    .link:hover{
+        background-color: #a9c5bd;
+        margin-left: -9px;
+        margin-right: -9px;
+        padding: 10px;
+        border-radius: 13px;
+    }
+
+    @media only screen and (max-width: 700px) {
+        .link {
+          text-align: center;
+        }
     }
 `;
 

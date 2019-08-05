@@ -11,35 +11,37 @@ const cssHeigth = {
 }
 
 const cssHeightTotal = {
-    height : "100%"
+    height: "100%"
 }
 
 export default class Container extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            heightTotal : true
+            heightTotal: true
         }
 
     }
 
-    setHeight(props){
-        if(props && this.state.heightTotal){
-            this.setState({heightTotal : false})
-        }else if(!props && !this.state.heightTotal){
-            this.setState({heightTotal : true})
+    setHeight(props) {
+        if (props && this.state.heightTotal) {
+            this.setState({ heightTotal: false })
+        } else if (!props && !this.state.heightTotal) {
+            this.setState({ heightTotal: true })
         }
     }
 
-   
+
 
     render() {
         const SwitchComponent = SwitchWithSlide;
 
         return (
             <React.Fragment>
-                <ContainerComponentStyled className={this.props.className} style={this.state.heightTotal ? cssHeightTotal : cssHeigth }>
+                <ContainerComponentStyled className={this.props.className} style={this.state.heightTotal ? cssHeightTotal : cssHeigth}>
                     <SwitchComponent>
+                        TESTE
+
                         <Route
                             path="/o-que-fazemos"
                             render={() => {
@@ -58,7 +60,7 @@ export default class Container extends React.Component {
                                 return (
                                     <div className="link">
                                         Quem Somos?
-                                </div>
+                                    </div>
                                 )
                             }}
                         />

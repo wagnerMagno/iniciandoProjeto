@@ -26,27 +26,36 @@ class App extends React.Component {
     
     this.state={
       displayMenu : "display-none", 
-      containerWidth : "container-total"
+      containerWidth : "container-total", 
+      route : ""
     }
 
     this.updateDisplayMenu = this.updateDisplayMenu.bind(this)
+    this.setRoute = this.setRoute.bind(this)
   }
 
   updateDisplayMenu(){
     if(this.state.displayMenu === "display-none"){
-      this.setState({displayMenu : "display-block", containerWidth :  "container-left"})
+      this.setState({displayMenu : "display-block", containerWidth :  "container-left", route:"" })
     }else{
       this.setState({displayMenu : "display-none", containerWidth : "container-total"})
-
     }
   }
+
+  setRoute(route){
+    console.log("state route ", route);
+    this.setState({
+      route: route
+    })
+  }
+
 
   render() {
     return (
 
       <HashRouter>
         <img onClick={this.updateDisplayMenu} style={icon} className="icon" alt="" src={this.state.displayMenu === "display-none" ? IconMenu : IconClose} />
-        <MenuComponent className={this.state.displayMenu} />
+        <MenuComponent setRoute={this.setRoute} route={this.state.route} updateDisplayMenu={this.updateDisplayMenu} className={this.state.displayMenu} />
         <VideoComponent />
         <Container className={this.state.containerWidth}/>
       </HashRouter>
