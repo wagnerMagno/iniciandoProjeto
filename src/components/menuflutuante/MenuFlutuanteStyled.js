@@ -32,7 +32,7 @@ const MenuFluanteComponentStyled = styled.div`
 
 
     @media only screen and (max-width: 700px) {
-        width: 90%;
+        width: 80%;
         font-size: 40px;
 
 
