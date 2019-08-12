@@ -56,7 +56,6 @@ export default class Container extends React.Component {
             <React.Fragment>
                 <ContainerComponentStyled className={this.props.className} style={this.state.heightTotal ? cssHeightTotal : cssHeigth}>
                     <SwitchComponent>
-                        TESTE
 
                         <Route
                             path="/o-que-fazemos"

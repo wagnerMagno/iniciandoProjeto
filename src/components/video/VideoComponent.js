@@ -18,8 +18,8 @@ export default class VideoComponent extends React.Component {
 
 
     componentDidMount() {
-        document.getElementById("teste").children[0].setAttribute("playsinline", "")
-        document.getElementById("teste").children[0].setAttribute("muted", "")
+        document.getElementById("div-video").children[0].setAttribute("playsinline", "")
+        document.getElementById("div-video").children[0].setAttribute("muted", "")
     }
 
     render() {
@@ -27,7 +27,7 @@ export default class VideoComponent extends React.Component {
 
 
         const videoOptions = {
-            src: 'https://player.vimeo.com/external/329779326.hd.mp4?s=d65c7e3f09e39facf31efc6a283df33c2391960e&profile_id=175',
+            src: `${process.env.PUBLIC_URL}/background-video.mp4`,
 
             ref: videoRef => {
                 this.videoRef = videoRef;
@@ -35,7 +35,6 @@ export default class VideoComponent extends React.Component {
             autoPlay: true,
             loop: true,
             muted : true, 
-            playsinline : true,
             onClick: () => {
                 if (this.videoRef && this.videoRef.paused) {
                     this.videoRef.play();
@@ -45,7 +44,7 @@ export default class VideoComponent extends React.Component {
             },
         };
         return (
-            <div id="teste" style={{
+            <div id="div-video" style={{
                 width: "100%",
                 height: "100%",
                 top: "0px",
