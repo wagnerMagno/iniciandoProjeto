@@ -5,7 +5,6 @@ import CarroselComponent from "../CarrosselComponent/carroselComponent.jsx";
 
 import imageExemplo from "../../images/exemplo1.png";
 import predioImg from "../../images/predio.png";
-import FooterComponent from "../footer/footerComponent.js";
 
 
 export default class SobreNosComponent extends React.Component {

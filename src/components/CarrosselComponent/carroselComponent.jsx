@@ -24,7 +24,7 @@ export default class CarroselComponent extends Component {
           {this.props.listImg.map( img => {
             return(
             <div >
-                <img style={{width: "290px"}}  src={img} />
+                <img style={{width: "63%"}}  src={img} />
             </div>
             )
           })}
