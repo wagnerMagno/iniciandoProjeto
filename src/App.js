@@ -19,6 +19,18 @@ const icon = {
   cursor : "pointer"
 }
 
+const footer={
+  position: "absolute",
+  zIndex: "3",
+  cursor: "pointer",
+  width: "98.8%",
+  marginLeft: "0",
+  backgroundColor: "black",
+  bottom: "0",
+  color: "white",
+  height: "43px",
+  textAlign: "center",
+}
 class App extends React.Component {
 
   constructor(props) {
@@ -55,6 +67,7 @@ class App extends React.Component {
 
       <HashRouter>
         <img onClick={this.updateDisplayMenu} style={icon} className="icon" alt="" src={this.state.displayMenu === "display-none" ? IconMenu : IconClose} />
+        <div style={footer} >teste</div>
         <MenuComponent setRoute={this.setRoute} route={this.state.route} updateDisplayMenu={this.updateDisplayMenu} className={this.state.displayMenu} />
         <VideoComponent />
         <Container className={this.state.containerWidth}/>

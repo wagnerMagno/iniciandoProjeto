@@ -18,8 +18,8 @@ const ContainerComponentStyled = styled.div`
     
   
     .link {
-        color: white;
-        background: rgba(38, 38, 38, 0.8);
+        color: #000000;
+        background: #ffffff;
         border-radius: 3px;
         display: flex;
         align-items: center;
@@ -36,11 +36,11 @@ const ContainerComponentStyled = styled.div`
     }
     
     .animatable div {
-        height: 100%;
     }
     
     .animatable{
         height: 100%;
+        overflow: auto;
     
     }
     

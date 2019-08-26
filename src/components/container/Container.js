@@ -5,6 +5,8 @@ import "./styles.css";
 import SwitchWithSlide from "../switchWithSlide/SwitchWithSlide.js";
 import ContainerComponentStyled from "./ContainerComponentStyled";
 import MenuFlutuante from "../menuflutuante/MenuFlutuante";
+import SobreNosComponent from "../sobreNos/sobreNos";
+import FooterComponent from "../footer/footerComponent";
 
 
 const cssHeigth = {
@@ -58,13 +60,13 @@ export default class Container extends React.Component {
                     <SwitchComponent>
 
                         <Route
-                            path="/o-que-fazemos"
+                            path="/sobre-nos"
                             render={() => {
                                 this.setHeight();
                                 return (
                                     <div className="link">
-                                        O que fazemos?
-                                                         </div>
+                                        <SobreNosComponent/>
+                                    </div>
                                 )
                             }}
                         />

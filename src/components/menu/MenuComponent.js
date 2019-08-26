@@ -38,8 +38,8 @@ export default class MenuComponent extends React.Component {
                         Home
                     </div>
 
-                    <div className="link"  onClick={() => this.animatioMenu("/o-que-fazemos")}>
-                        O que fazemos?
+                    <div className="link"  onClick={() => this.animatioMenu("/sobre-nos")}>
+                        Sobre Nós
                     </div>
 
                     <div className="link" onClick={() => this.animatioMenu("/quem-somos")}>

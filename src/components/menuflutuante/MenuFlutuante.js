@@ -49,9 +49,9 @@ export default class MenuFlutuante extends React.Component {
                         Home
                     </p>
                 </div>
-                <div className={this.state.colorHover ? "color-hover" : ""} onClick={() => this.animatioMenu("/o-que-fazemos")}>
+                <div className={this.state.colorHover ? "color-hover" : ""} onClick={() => this.animatioMenu("/sobre-nos")}>
                     <p>
-                        O que fazemos?
+                        Sobre Nós
                     </p>
                 </div>
                 <div className={this.state.colorHover ? "color-hover" : ""} onClick={() => this.animatioMenu("/quem-somos")}>
