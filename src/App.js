@@ -23,7 +23,7 @@ const footer={
   position: "absolute",
   zIndex: "3",
   cursor: "pointer",
-  width: "98.8%",
+  width: "100%",
   marginLeft: "0",
   backgroundColor: "black",
   bottom: "0",
