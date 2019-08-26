@@ -16,6 +16,25 @@ const ContainerComponentStyled = styled.div`
     overflow: hidden;
 
     
+    .background-transparent{
+        background-color: transparent;
+        margin-top : 1px sold white;
+    }
+
+    .home {
+
+        color: #000000;
+        border-radius: 3px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        font-size: 48px;
+        text-decoration: none;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+        box-sizing: border-box;
+    }
   
     .link {
         color: #000000;

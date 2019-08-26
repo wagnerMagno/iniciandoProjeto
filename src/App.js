@@ -41,7 +41,7 @@ class App extends React.Component {
       containerWidth : "container-total", 
       route : ""
     }
-
+    
     this.updateDisplayMenu = this.updateDisplayMenu.bind(this)
     this.setRoute = this.setRoute.bind(this)
   }
@@ -55,7 +55,6 @@ class App extends React.Component {
   }
 
   setRoute(route){
-    console.log("state route ", route);
     this.setState({
       route: route
     })
@@ -67,7 +66,6 @@ class App extends React.Component {
 
       <HashRouter>
         <img onClick={this.updateDisplayMenu} style={icon} className="icon" alt="" src={this.state.displayMenu === "display-none" ? IconMenu : IconClose} />
-        <div style={footer} >teste</div>
         <MenuComponent setRoute={this.setRoute} route={this.state.route} updateDisplayMenu={this.updateDisplayMenu} className={this.state.displayMenu} />
         <VideoComponent />
         <Container className={this.state.containerWidth}/>

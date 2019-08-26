@@ -7,6 +7,7 @@ import ContainerComponentStyled from "./ContainerComponentStyled";
 import MenuFlutuante from "../menuflutuante/MenuFlutuante";
 import SobreNosComponent from "../sobreNos/sobreNos";
 import FooterComponent from "../footer/footerComponent";
+import HomeComponent from "../home/home";
 
 
 const cssHeigth = {
@@ -17,17 +18,45 @@ const cssHeightTotal = {
     height: "100%"
 }
 
+const footerBackGround = {
+    position: "absolute",
+    zIndex: "3",
+    cursor: "pointer",
+    width: "100%",
+    marginLeft: "0",
+    backgroundColor: "black",
+    bottom: "0",
+    color: "white",
+    height: "43px",
+    textAlign: "center",
+}
+const footerTransparent = {
+    position: "absolute",
+    zIndex: "3",
+    cursor: "pointer",
+    width: "100%",
+    marginLeft: "0",
+    backgroundColor: "transparent",
+    bottom: "0",
+    color: "white",
+    height: "43px",
+    textAlign: "center",
+    borderTop : "1px solid #b4b4b4", 
+    paddingTop: "18px"
+}
+
 export default class Container extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            heightTotal: true, 
-            width: 0, 
-            height: 0 
+            heightTotal: true,
+            width: 0,
+            height: 0, 
+            isHome : false
         }
 
         this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
-
+        this.setHome = this.setHome.bind(this);
     }
 
 
@@ -49,23 +78,34 @@ export default class Container extends React.Component {
         }
     }
 
+    setHome(op){
+        if(op !== this.state.isHome){
+            this.setState({
+                isHome : op
+            })
+        }
+
+    }
+
 
 
     render() {
         const SwitchComponent = SwitchWithSlide;
 
         return (
-            <React.Fragment>
+            <div>
+                <div style={this.state.isHome ? footerTransparent : footerBackGround} >teste </div>
+
                 <ContainerComponentStyled className={this.props.className} style={this.state.heightTotal ? cssHeightTotal : cssHeigth}>
                     <SwitchComponent>
 
                         <Route
                             path="/sobre-nos"
                             render={() => {
-                                this.setHeight();
+                                this.setHome(false);
                                 return (
                                     <div className="link">
-                                        <SobreNosComponent/>
+                                        <SobreNosComponent />
                                     </div>
                                 )
                             }}
@@ -73,6 +113,7 @@ export default class Container extends React.Component {
                         <Route
                             path="/quem-somos"
                             render={() => {
+                                this.setHome(false);
                                 this.setHeight();
                                 return (
                                     <div className="link">
@@ -84,17 +125,21 @@ export default class Container extends React.Component {
 
                         <Route
                             path="/"
-                            render={() => { 
+                            render={() => {
+                                this.setHome(true);
                                 
                                 return (
-                                    <MenuFlutuante></MenuFlutuante>
+                                    <div className="home">
+                                        <HomeComponent/>
+                                    </div>
+                                    // <MenuFlutuante></MenuFlutuante>
                                 )
                             }}
                         />
                     </SwitchComponent>
                 </ContainerComponentStyled>
 
-            </React.Fragment>
+            </div>
         );
     }
 }

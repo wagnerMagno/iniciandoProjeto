@@ -11,7 +11,6 @@ export default class SobreNosComponent extends React.Component {
 
     constructor(props) {
         super(props);
-        console.log("aksjdaksdaksdkjk wag");
 
         this.state = {
 
