@@ -84,7 +84,7 @@ class App extends React.Component {
         }
         <MenuComponent setRoute={this.setRoute} route={this.state.route} updateDisplayMenu={this.updateDisplayMenu} className={this.state.displayMenu} />
         <VideoComponent />
-        <Container setHome={(op) => this.setHome(op)} className={this.state.containerWidth}/>
+        <Container isHomeApp={this.state.isHome} setHome={(op) => this.setHome(op)} className={this.state.containerWidth}/>
       </HashRouter>
     )
 

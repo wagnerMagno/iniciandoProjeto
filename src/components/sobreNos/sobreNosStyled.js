@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 
 const SobreNosComponentStyled = styled.div`
-    margin-top: 100px;
+    margin-top: 50px;
     width: 100%
     text-align: center;
 

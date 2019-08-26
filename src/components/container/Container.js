@@ -4,7 +4,6 @@ import { Route } from "react-router-dom";
 import "./styles.css";
 import SwitchWithSlide from "../switchWithSlide/SwitchWithSlide.js";
 import ContainerComponentStyled from "./ContainerComponentStyled";
-import MenuFlutuante from "../menuflutuante/MenuFlutuante";
 import SobreNosComponent from "../sobreNos/sobreNos";
 import FooterComponent from "../footer/footerComponent";
 import HomeComponent from "../home/home";
@@ -54,7 +53,8 @@ export default class Container extends React.Component {
             height: 0, 
             isHome : false
         }
-
+        this.props.setHome(this.state.isHome); 
+         
         this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
         this.setHome = this.setHome.bind(this);
     }
@@ -82,7 +82,7 @@ export default class Container extends React.Component {
         console.log("props containe ", this.props.setHome);
         if(op !== this.state.isHome){
             console.log("props containe ", this.props.setHome);
-            this.props.setHome(op)
+            this.props.setHome(op); 
             this.setState({
                 isHome : op
             })
@@ -135,7 +135,6 @@ export default class Container extends React.Component {
                                     <div className="home">
                                         <HomeComponent/>
                                     </div>
-                                    // <MenuFlutuante></MenuFlutuante>
                                 )
                             }}
                         />
