@@ -45,6 +45,31 @@ const SobreNosComponentStyled = styled.div`
    .center{
         text-align: center;
    }
+
+
+   
+   @media only screen and (max-width: 700px) {
+        .div-img-title{
+            margin-left: -6px;
+            
+            img{
+                width: 92px;
+            }
+        }
+
+        .info{
+            width: 63%;
+            margin: 0 auto;
+            text-align: left;
+            display: inline-block;
+            margin-left: -48px;
+        }
+
+        .p-title{
+            font-size: 16px;
+        }
+
+    }
 `;
 
 export default SobreNosComponentStyled;
