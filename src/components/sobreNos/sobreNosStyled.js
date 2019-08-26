@@ -58,11 +58,11 @@ const SobreNosComponentStyled = styled.div`
         }
 
         .info{
-            width: 63%;
+            width: 70%;
             margin: 0 auto;
             text-align: left;
             display: inline-block;
-            margin-left: -48px;
+            font-size: initial;
         }
 
         .p-title{

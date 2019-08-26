@@ -51,9 +51,9 @@ export default class SobreNosComponent extends React.Component {
                         </p>
 
                     </div>
-                    <div className="div-img-title">
+                    {/* <div className="div-img-title">
                         <img src={predioImg} />
-                    </div>
+                    </div> */}
 
                 </div>
                 <br></br>
