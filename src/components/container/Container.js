@@ -79,7 +79,10 @@ export default class Container extends React.Component {
     }
 
     setHome(op){
+        console.log("props containe ", this.props.setHome);
         if(op !== this.state.isHome){
+            console.log("props containe ", this.props.setHome);
+            this.props.setHome(op)
             this.setState({
                 isHome : op
             })

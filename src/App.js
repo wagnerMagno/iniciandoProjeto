@@ -9,6 +9,9 @@ import MenuComponent from './components/menu/MenuComponent';
 import IconMenu from "./images/menu.svg";
 import IconClose from "./images/close.svg";
 
+import IconMenuWhite from "./images/menu-white.svg";
+import IconCloseWhite from "./images/close-white.svg";
+
 
 const icon = {
   marginRight: "4px",
@@ -39,11 +42,13 @@ class App extends React.Component {
     this.state={
       displayMenu : "display-none", 
       containerWidth : "container-total", 
-      route : ""
+      route : "", 
+      isHome : true
     }
     
     this.updateDisplayMenu = this.updateDisplayMenu.bind(this)
     this.setRoute = this.setRoute.bind(this)
+    this.setHome = this.setHome.bind(this)
   }
 
   updateDisplayMenu(){
@@ -60,15 +65,26 @@ class App extends React.Component {
     })
   }
 
+  setHome(op){
+    console.log("props wag ", op);
+    this.setState({
+      isHome: op
+    })
+  }
 
   render() {
     return (
 
       <HashRouter>
-        <img onClick={this.updateDisplayMenu} style={icon} className="icon" alt="" src={this.state.displayMenu === "display-none" ? IconMenu : IconClose} />
+        {this.state.isHome ?
+          <img onClick={this.updateDisplayMenu} style={icon} className="icon" alt="" src={this.state.displayMenu === "display-none" ? IconMenuWhite : IconCloseWhite} />
+          :
+          <img onClick={this.updateDisplayMenu} style={icon} className="icon" alt="" src={this.state.displayMenu === "display-none" ? IconMenu : IconClose} />
+        
+        }
         <MenuComponent setRoute={this.setRoute} route={this.state.route} updateDisplayMenu={this.updateDisplayMenu} className={this.state.displayMenu} />
         <VideoComponent />
-        <Container className={this.state.containerWidth}/>
+        <Container setHome={(op) => this.setHome(op)} className={this.state.containerWidth}/>
       </HashRouter>
     )
 
