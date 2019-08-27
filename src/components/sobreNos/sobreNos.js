@@ -14,7 +14,24 @@ export default class SobreNosComponent extends React.Component {
 
         this.state = {
 
-            listImg : [imageExemplo, imageExemplo, imageExemplo, imageExemplo, imageExemplo, imageExemplo]
+            listImg: [imageExemplo, imageExemplo, imageExemplo, imageExemplo, imageExemplo, imageExemplo],
+            coment : [
+                {
+                    comentario : " Venho agradecer pelo profissionalismo e a qualidade dos serviços prestados, no qual a Administradora F&F sempre conseguiu proporcionar ao nosso condominio.Acreduti estar sendo uma ótima parceria, desde Outubro de 2015.Tanto os gestores como a equipe, sempre estão disponpiveis para atender as nossas demandas, com muita educação e responsabilidade.",
+                    agradecimento: "Nosso muito obrigado!",
+                    ass: "Ana Garcia | Spazio Cadoro"
+                },
+                {
+                    comentario : " Venho agradecer pelo profissionalismo e a qualidade dos serviços prestados, no qual a Administradora F&F sempre conseguiu proporcionar ao nosso condominio.Acreduti estar sendo uma ótima parceria, desde Outubro de 2015.Tanto os gestores como a equipe, sempre estão disponpiveis para atender as nossas demandas, com muita educação e responsabilidade.",
+                    agradecimento: "Nosso muito obrigado!",
+                    ass: "Ana Garcia | Spazio Cadoro"
+                },
+                {
+                    comentario : " Venho agradecer pelo profissionalismo e a qualidade dos serviços prestados, no qual a Administradora F&F sempre conseguiu proporcionar ao nosso condominio.Acreduti estar sendo uma ótima parceria, desde Outubro de 2015.Tanto os gestores como a equipe, sempre estão disponpiveis para atender as nossas demandas, com muita educação e responsabilidade.",
+                    agradecimento: "Nosso muito obrigado!",
+                    ass: "Ana Garcia | Spazio Cadoro"
+                },
+            ]
         }
 
     }
@@ -50,31 +67,19 @@ export default class SobreNosComponent extends React.Component {
                         </p>
 
                     </div>
-                    {/* <div className="div-img-title">
-                        <img src={predioImg} />
-                    </div> */}
 
                 </div>
                 <br></br>
-                <CarroselComponent listImg={this.state.listImg} />
+                <CarroselComponent isImg={true} listImg={this.state.listImg} />
                 <div>
                     <div class="info">
 
                         <p className="font-orange label center">
                             Depoimentos
-                    </p>
-                        <p className="descricao" style={{ textAlign: 'center' }}>
-                            Venho agradecer pelo profissionalismo e a qualidade dos serviços prestados, no qual a Administradora F&F sempre conseguiu proporcionar ao nosso condominio.
-                            Acreduti estar sendo uma ótima parceria, desde Outubro de 2015.
-                            Tamto os gestores como a equipe, sempre estão disponpiveis para atender as nossas demandas, com muita educação e responsabilidade.
-                    </p>
-                        <p className="descricao center">
-                            Nosso muito obrigado!
-                    </p>
-
-                        <p className="descricao font-orange center">
-                            Ana Garcia | Spazio Cadoro
-                    </p>
+                        </p>
+                        <CarroselComponent isImg={false} listComentario={this.state.coment} />
+                        
+                       
 
                         <br />
 

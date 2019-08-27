@@ -66,7 +66,6 @@ class App extends React.Component {
   }
 
   setHome(op){
-    console.log("props wag ", op);
     this.setState({
       isHome: op
     })

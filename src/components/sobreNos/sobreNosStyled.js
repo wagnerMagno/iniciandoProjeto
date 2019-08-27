@@ -22,7 +22,8 @@ const SobreNosComponentStyled = styled.div`
    }
 
    .p-title{
-        font-size: 37px;
+    font-family : Bureau Black;
+        font-size: 51px;
        display: inline;
        margin-right: 12px;
     }
@@ -33,12 +34,14 @@ const SobreNosComponentStyled = styled.div`
 
    .descricao{
     font-size: 16px;
+    font-family : Text Font;
    }
 
    .label{
         font-size: 18px;
         font-weight: 600;
         margin-bottom: -6px;
+        font-family : Text Bold;
 
    }
 

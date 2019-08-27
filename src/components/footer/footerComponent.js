@@ -13,7 +13,17 @@ export default class FooterComponent extends React.Component {
     render() {
         return (
             <FooterStyled className={this.props.className}>
-              teste
+              <p className="link">TIME</p>
+              <p className="divisor">|</p>  
+              <p className="link">LIGAMOS PARA VOCÊ</p>
+              <p className="divisor">|</p>  
+              <p className="link">CHAT</p>
+              <p className="divisor">|</p>  
+              <p className="link selected">ADMINISTRAÇÃO DE CONDOMÍNIOS</p>
+              <p className="divisor">|</p>  
+              <p className="link">ADMINISTRAÇÃO DIGITAL</p>
+              <p className="divisor">|</p>  
+              <p className="link">JÁ SOU CLIENTE</p>
             </FooterStyled>
         )
     }

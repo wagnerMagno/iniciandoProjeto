@@ -1,5 +1,10 @@
-button{
+.div-img button{
     display: none !important;
+}
+
+.div-comenter .slick-slider{
+    width: 85% !important;
+    margin-left: 10% !important;
 }
 
 /* Slider */

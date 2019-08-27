@@ -1,3 +1,17 @@
+@font-face {
+  font-family: 'Bureau Black';
+  src: url('./fonts/bureau-black.woff2') format('woff2'); /* Super Modern Browsers */
+}
+@font-face {
+  font-family: 'Text Bold';
+  src: url('./fonts/text-bold-font.woff2') format('woff2'); /* Super Modern Browsers */
+}
+@font-face {
+  font-family: 'Text Font';
+  src: url('./fonts/text-font.woff2') format('woff2'); /* Super Modern Browsers */
+}
+
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",

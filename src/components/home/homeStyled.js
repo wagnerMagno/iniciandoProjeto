@@ -8,8 +8,8 @@ const HomeComponentStyled = styled.div`
 
    
    .info{
-        width: 35%;
-        margin-left: -50%;
+        width: 26%;
+        margin-left: -58%;
         text-align: left;
         display: inline-block;
         margin-top: 7%;
@@ -28,9 +28,11 @@ const HomeComponentStyled = styled.div`
    }
 
    .p-title{
-        font-size: 37px;
        display: inline;
        margin-right: 12px;
+       font-family : Bureau Black;
+       font-size: 51px;
+
     }
 
    .font-orange{
@@ -43,6 +45,7 @@ const HomeComponentStyled = styled.div`
     margin-left: 8%;
     margin-top: -84px;
     font-size: 26px;
+    font-family : Text Bold;
    }
    .descricao{
     font-size: 16px;
@@ -50,6 +53,8 @@ const HomeComponentStyled = styled.div`
     color: white;
     margin-left: 8%;
     margin-top: 32px;
+    font-family : Text Font;
+
    }
 
 

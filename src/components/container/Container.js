@@ -28,6 +28,7 @@ const footerBackGround = {
     color: "white",
     height: "43px",
     textAlign: "center",
+    paddingTop: "18px"
 }
 const footerTransparent = {
     position: "absolute",
@@ -79,9 +80,7 @@ export default class Container extends React.Component {
     }
 
     setHome(op){
-        console.log("props containe ", this.props.setHome);
         if(op !== this.state.isHome){
-            console.log("props containe ", this.props.setHome);
             this.props.setHome(op); 
             this.setState({
                 isHome : op
@@ -97,7 +96,9 @@ export default class Container extends React.Component {
 
         return (
             <div>
-                <div style={this.state.isHome ? footerTransparent : footerBackGround} >teste </div>
+                <div style={this.state.isHome ? footerTransparent : footerBackGround} >
+                    <FooterComponent/>
+                </div>
 
                 <ContainerComponentStyled className={this.props.className} style={this.state.heightTotal ? cssHeightTotal : cssHeigth}>
                     <SwitchComponent>

@@ -33,7 +33,7 @@ export default class HomeComponent extends React.Component {
                 <div className="title">
                     <div class="info">
 
-                        <p className="title">
+                        <p className="p-title">
                             TUDO QUE SEU CONDOMÍNIO PRECISA E AINDA PAGANDO MENOS
                         </p>
 
