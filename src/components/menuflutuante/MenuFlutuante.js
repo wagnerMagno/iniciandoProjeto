@@ -59,6 +59,11 @@ export default class MenuFlutuante extends React.Component {
                         Tradi Final
                     </p>
                 </div>
+                <div className={this.state.colorHover ? "color-hover" : ""} onClick={() => this.animatioMenu("/digio-final")}>
+                    <p>
+                        Digio Final
+                    </p>
+                </div>
 
             </MenuFluanteComponentStyled>
         )

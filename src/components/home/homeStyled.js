@@ -57,6 +57,23 @@ const HomeComponentStyled = styled.div`
 
    }
 
+   @media only screen and (max-width: 700px) {
+        margin-left: 13px;
+        .info{
+
+            width: 66%;
+            margin-left: -18%;
+            text-align: left;
+            display: inline-block;
+            margin-top: 7%;
+            margin-bottom: 5%;
+        }
+
+        .p-title{
+            font-size: 40px;
+        }
+    }
+
 
 
 
