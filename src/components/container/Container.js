@@ -7,6 +7,7 @@ import ContainerComponentStyled from "./ContainerComponentStyled";
 import SobreNosComponent from "../sobreNos/sobreNos";
 import FooterComponent from "../footer/footerComponent";
 import HomeComponent from "../home/home";
+import TradiFinalComponent from "../tradiFinal/tradiFinal";
 
 
 const cssHeigth = {
@@ -115,13 +116,13 @@ export default class Container extends React.Component {
                             }}
                         />
                         <Route
-                            path="/quem-somos"
+                            path="/tradi-final"
                             render={() => {
                                 this.setHome(false);
                                 this.setHeight();
                                 return (
                                     <div className="link">
-                                        Quem Somos?
+                                        <TradiFinalComponent></TradiFinalComponent>
                                     </div>
                                 )
                             }}

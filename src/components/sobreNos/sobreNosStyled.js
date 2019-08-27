@@ -8,7 +8,7 @@ const SobreNosComponentStyled = styled.div`
 
    
    .info{
-        width: 40%
+        width: 36%
         margin: 0 auto;
         text-align: left;
         display: inline-block;

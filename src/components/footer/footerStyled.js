@@ -29,6 +29,15 @@ const FooterStyled = styled.div`
        margin-left: 10px;
        margin-right: 10px;
    }
+
+   
+   @media only screen and (max-width: 700px) {
+        .link{
+             font-size: 6px;
+          }
+
+          height: 59px;
+     }
 `;
 
 export default FooterStyled;
