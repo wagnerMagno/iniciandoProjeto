@@ -1,6 +1,7 @@
 import React from "react";
 import HomeComponentStyled from "./homeStyled.js";
 
+import { Link } from 'react-router-dom'
 
 import imageExemplo from "../../images/exemplo1.png";
 import predioImg from "../../images/predio.png";
@@ -32,14 +33,15 @@ export default class HomeComponent extends React.Component {
 
                 <div className="title">
                     <div class="info">
+                    <Link style={{color: 'white', textDecoration: "none"}} to="/digio-final">
+                            <p className="p-title">
+                                TUDO QUE SEU CONDOMÍNIO PRECISA E AINDA PAGANDO MENOS
+                            </p>
 
-                        <p className="p-title">
-                            TUDO QUE SEU CONDOMÍNIO PRECISA E AINDA PAGANDO MENOS
-                        </p>
-
+                        </Link>
                         <br />
 
-                       
+
 
                     </div>
 

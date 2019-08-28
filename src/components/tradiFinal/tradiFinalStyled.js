@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 
 const TradiFinalComponentStyled = styled.div`
-    margin-top: 50px;
+    margin-top: 73px;
     width: 100%
     text-align: center;
 
@@ -132,7 +132,7 @@ const TradiFinalComponentStyled = styled.div`
         }
 
         .p-title{
-            font-size: 16px;
+            font-size: 30px;
         }
 
         .container{

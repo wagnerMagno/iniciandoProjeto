@@ -98,9 +98,20 @@ export default class Container extends React.Component {
 
         return (
             <div>
-                <div style={this.state.isHome ? footerTransparent : footerBackGround} >
-                    <FooterComponent />
-                </div>
+
+                {
+                    window.innerWidth > 700 ?
+                        <div style={this.state.isHome ? footerTransparent : footerBackGround} >
+                            <FooterComponent />
+                        </div>
+                        :
+                        this.props.displayMenu == "display-block" ?
+                            <div style={this.state.isHome ? footerTransparent : footerBackGround} >
+                                <FooterComponent />
+                            </div>
+                            : ''
+
+                }
 
                 <ContainerComponentStyled className={this.props.className} style={this.state.heightTotal ? cssHeightTotal : cssHeigth}>
                     <SwitchComponent>
@@ -141,7 +152,7 @@ export default class Container extends React.Component {
                             }}
                         />
 
-                       
+
                         <Route
                             path="/"
                             render={() => {

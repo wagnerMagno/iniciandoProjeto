@@ -14,7 +14,28 @@ export default class SobreNosComponent extends React.Component {
 
         this.state = {
 
-            listImg: [imageExemplo, imageExemplo, imageExemplo, imageExemplo, imageExemplo, imageExemplo],
+            listImg: [
+                {
+                    img : imageExemplo,
+                    title : 'title imagem'
+                },
+                {
+                    img : imageExemplo,
+                    title : 'title imagem'
+                },
+                {
+                    img : imageExemplo,
+                    title : 'title imagem'
+                },
+                {
+                    img : imageExemplo,
+                    title : 'title imagem'
+                },
+                {
+                    img : imageExemplo,
+                    title : 'title imagem'
+                },
+            ],
             coment : [
                 {
                     comentario : " Venho agradecer pelo profissionalismo e a qualidade dos serviços prestados, no qual a Administradora F&F sempre conseguiu proporcionar ao nosso condominio.Acreduti estar sendo uma ótima parceria, desde Outubro de 2015.Tanto os gestores como a equipe, sempre estão disponpiveis para atender as nossas demandas, com muita educação e responsabilidade.",

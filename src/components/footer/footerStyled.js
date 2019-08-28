@@ -7,7 +7,7 @@ const FooterStyled = styled.div`
     }
 
     .link{
-        font-family: Text Bold;
+        font-family: Text Font;
         font-size: 12px;
    }
    

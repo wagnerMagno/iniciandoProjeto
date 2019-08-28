@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 
 const DigiFinalComponentStyled = styled.div`
-    margin-top: 50px;
+    margin-top: 75px;
     width: 100%
     text-align: center;
 
@@ -65,7 +65,7 @@ const DigiFinalComponentStyled = styled.div`
             display: inline-block;
             top: 0;
             position: absolute;
-            margin-top: 50px;
+            margin-top: 73px;
        }
 
        .descricao{
@@ -136,7 +136,7 @@ const DigiFinalComponentStyled = styled.div`
         }
 
         .p-title{
-            font-size: 16px;
+            font-size: 30px;
         }
 
         .container{

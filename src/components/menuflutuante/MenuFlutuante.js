@@ -44,22 +44,22 @@ export default class MenuFlutuante extends React.Component {
 
         return (
             <MenuFluanteComponentStyled onMouseEnter={this.handleHover} onMouseLeave={this.handleHover} className={this.props.className}>
-                <div className={this.state.colorHover ? "color-hover" : ""} onClick={() => this.animatioMenu("/")} >
+                <div style={{marginBottom: '30px'}} className={this.state.colorHover ? "color-hover" : ""} onClick={() => this.animatioMenu("/")} >
                     <p>
                         Home
                     </p>
                 </div>
-                <div className={this.state.colorHover ? "color-hover" : ""} onClick={() => this.animatioMenu("/sobre-nos")}>
+                <div style={{marginBottom: '30px'}} className={this.state.colorHover ? "color-hover" : ""} onClick={() => this.animatioMenu("/sobre-nos")}>
                     <p>
                         Sobre Nós
                     </p>
                 </div>
-                <div className={this.state.colorHover ? "color-hover" : ""} onClick={() => this.animatioMenu("/tradi-final")}>
+                <div style={{marginBottom: '30px'}} className={this.state.colorHover ? "color-hover" : ""} onClick={() => this.animatioMenu("/tradi-final")}>
                     <p>
                         Tradi Final
                     </p>
                 </div>
-                <div className={this.state.colorHover ? "color-hover" : ""} onClick={() => this.animatioMenu("/digio-final")}>
+                <div style={{marginBottom: '30px'}} className={this.state.colorHover ? "color-hover" : ""} onClick={() => this.animatioMenu("/digio-final")}>
                     <p>
                         Digio Final
                     </p>

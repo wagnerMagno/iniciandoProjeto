@@ -4,11 +4,15 @@ import Slider from "react-slick";
 import './slickTheme.css'
 import './slick.css'
 
+import { Tooltip } from 'antd';
+import 'antd/dist/antd.css';
+
+
 export default class CarroselComponent extends Component {
   render() {
     const settingsImg = {
       infinite: true,
-      slidesToShow: 3,
+      slidesToShow: window.innerWidth > 700 ? 3 : 2,
       slidesToScroll: 1,
       autoplay: true,
       speed: 2500,
@@ -32,11 +36,11 @@ export default class CarroselComponent extends Component {
       return (
         <div className="div-img" style={{ marginBottom: "35px" }}>
           <Slider  {...settingsImg}>
-            {this.props.listImg.map(img => {
+            {this.props.listImg.map(obj => {
               return (
-                <div >
-                  <img style={{ width: "70%" }} src={img} />
-                </div>
+                <Tooltip title={obj.title}>
+                  <img class="teste" style={{ width: "70%" }} src={obj.img} />
+                </Tooltip> 
               )
             })}
           </Slider>
@@ -49,7 +53,7 @@ export default class CarroselComponent extends Component {
           <Slider {...settingsComenter} className="slick-comenter">
             {this.props.listComentario.map(c => {
               return (
-                <div>
+                <Tooltip>
                   <p className="descricao" style={{ textAlign: 'center' }}>
                     {c.comentario}
                   </p>
@@ -61,12 +65,13 @@ export default class CarroselComponent extends Component {
 
                     {c.ass}
                   </p>
-                </div>
+                </Tooltip>
+                
               )
             })}
           </Slider>
         </div>
-          )
-        }
-      }
+      )
+    }
+  }
 }

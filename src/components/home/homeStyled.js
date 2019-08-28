@@ -5,14 +5,15 @@ const HomeComponentStyled = styled.div`
     margin-top: 100px;
     width: 100%
     text-align: center;
+    margin-left: 127px;
 
    
    .info{
-        width: 26%;
-        margin-left: -58%;
-        text-align: left;
+        width: 70%;
+        margin-left: -15%;
         display: inline-block;
         margin-top: 7%;
+        text-align: left;
         margin-bottom: 5%;
     }
 
@@ -31,7 +32,7 @@ const HomeComponentStyled = styled.div`
        display: inline;
        margin-right: 12px;
        font-family : Bureau Black;
-       font-size: 51px;
+       font-size: 80px;
 
     }
 
@@ -59,14 +60,17 @@ const HomeComponentStyled = styled.div`
 
    @media only screen and (max-width: 700px) {
         margin-left: 13px;
+        margin-top: 157px;
+
         .info{
 
             width: 66%;
-            margin-left: -18%;
             text-align: left;
             display: inline-block;
             margin-top: 7%;
             margin-bottom: 5%;
+            margin-left: -15%;
+
         }
 
         .p-title{
