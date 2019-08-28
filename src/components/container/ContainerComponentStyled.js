@@ -16,6 +16,7 @@ const ContainerComponentStyled = styled.div`
     overflow: hidden;
 
     
+    
     .background-transparent{
         background-color: transparent;
         margin-top : 1px sold white;
