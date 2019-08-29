@@ -49,3 +49,22 @@
 }
 
 
+.testeContainer::-webkit-scrollbar {
+  width: 10px;
+}
+ 
+.testeContainer::-webkit-scrollbar-thumb {
+  background: #ddd; 
+}
+
+.testeContainer::-webkit-scrollbar-track {
+  background: #666;
+  margin-top: 61px;
+}
+
+@media only screen and (min-width: 700px) {
+  
+  .testeContainer::-webkit-scrollbar-track {
+    margin-bottom: 43px;
+  }
+}

@@ -20,6 +20,26 @@ const MenuFluanteComponentStyled = styled.div`
        
    }
 
+   .link-menu{
+    text-align: left;
+    display: block;
+    font-size: 9px;
+   }
+
+   .link-menu:hover{
+    background-color: white;
+    border-radius: 10px;
+    color: black;
+    padding: 5px 10px 5px 10px;
+    }
+ 
+
+   .selected{
+    background-color: white;
+    border-radius: 10px;
+    color: black;
+    padding: 5px 10px 5px 10px;
+}
 
    .color-hover{
         color: #aaa9a9;  

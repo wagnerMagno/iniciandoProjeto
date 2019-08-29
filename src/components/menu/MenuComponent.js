@@ -31,7 +31,7 @@ export default class MenuComponent extends React.Component {
                     Menu
                 </h2>
 
-                <MenuFlutuante animatioMenu={this.animatioMenu}></MenuFlutuante>
+                <MenuFlutuante displayMenu={this.props.displayMenu} animatioMenu={this.animatioMenu}></MenuFlutuante>
             </MenuComponentStyled>
         )
     }

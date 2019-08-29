@@ -30,14 +30,14 @@ const divHeaderHome = {
   position: 'absolute',
   zIndex: '5',
   height: '61px',
-  width: '98.8%',
+  width: '100%',
 }
 const divHeader = {
   backgroundColor: 'white',
   position: 'absolute',
   zIndex: '5',
   height: '61px',
-  width: '98.8%',
+  width: '100%',
 }
 
 const iconLogo = {
@@ -119,7 +119,7 @@ class App extends React.Component {
 
           }
         </div>
-        <MenuComponent setRoute={this.setRoute} route={this.state.route} updateDisplayMenu={this.updateDisplayMenu} className={this.state.displayMenu} />
+        <MenuComponent displayMenu={this.state.displayMenu} setRoute={this.setRoute} route={this.state.route} updateDisplayMenu={this.updateDisplayMenu} className={this.state.displayMenu} />
         <VideoComponent />
         <Container displayMenu={this.state.displayMenu} isHomeApp={this.state.isHome} setHome={(op) => this.setHome(op)} className={this.state.containerWidth} />
       </HashRouter>

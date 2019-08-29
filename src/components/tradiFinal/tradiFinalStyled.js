@@ -2,9 +2,10 @@ import styled from 'styled-components'
 
 
 const TradiFinalComponentStyled = styled.div`
-    margin-top: 73px;
+    margin-top: 130px;
     width: 100%
     text-align: center;
+    height: 100%;
 
    
    .info{

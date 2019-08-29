@@ -105,16 +105,11 @@ export default class Container extends React.Component {
                             <FooterComponent />
                         </div>
                         :
-                        this.props.displayMenu == "display-block" ?
-                            <div style={this.state.isHome ? footerTransparent : footerBackGround} >
-                                <FooterComponent />
-                            </div>
-                            : ''
-
+                       ''
                 }
 
-                <ContainerComponentStyled className={this.props.className} style={this.state.heightTotal ? cssHeightTotal : cssHeigth}>
-                    <SwitchComponent>
+                <ContainerComponentStyled className={this.props.className + " testeContainer"} style={this.state.heightTotal ? cssHeightTotal : cssHeigth}>
+                    <SwitchComponent >
 
                         <Route
                             path="/sobre-nos"
@@ -133,8 +128,8 @@ export default class Container extends React.Component {
                                 this.setHome(false);
                                 this.setHeight();
                                 return (
-                                    <div className="link">
-                                        <TradiFinalComponent></TradiFinalComponent>
+                                    <div className="link" >
+                                        <TradiFinalComponent ></TradiFinalComponent>
                                     </div>
                                 )
                             }}

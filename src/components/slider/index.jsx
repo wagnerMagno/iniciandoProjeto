@@ -113,7 +113,7 @@ export default class Slider extends React.Component {
           this.props["data-qa-loading"] || this.state.animating
         )}
       >
-        <div className={this.props.className}>{this.props.children}</div>
+        <div className={this.props.className} style={{height: "100%"}}>{this.props.children}</div>
       </div>
     );
   }

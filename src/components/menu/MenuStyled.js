@@ -4,7 +4,7 @@ import styled from 'styled-components'
 const MenuComponentStyled = styled.div`
     height: 100%;
     background-color: rgba(120,165,157);
-    width: 98.9%;
+    width: 100%;
     float: left;
     color: white;
     font-weight: 600;

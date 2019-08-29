@@ -13,7 +13,7 @@ const ContainerComponentStyled = styled.div`
     position: absolute;
     height: 100%;
     border-radius: 5px;
-    overflow: hidden;
+    overflow: auto;
 
     
     
@@ -45,7 +45,6 @@ const ContainerComponentStyled = styled.div`
         align-items: center;
         justify-content: center;
         width: 100%;
-        height: 100%;
         font-size: 48px;
         text-decoration: none;
         font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
@@ -56,11 +55,11 @@ const ContainerComponentStyled = styled.div`
     }
     
     .animatable div {
+        
     }
     
     .animatable{
         height: 100%;
-        overflow: auto;
     
     }
     
