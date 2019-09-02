@@ -55,12 +55,14 @@ export default class Container extends React.Component {
             width: 0,
             height: 0,
             isHome: false, 
-            isSafari : !!window.safari
+            isSafari : Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > -1
         }
         this.props.setHome(this.state.isHome);
 
         this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
         this.setHome = this.setHome.bind(this);
+
+        console.log("Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0 wag ", Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0);
 
     }
 
@@ -110,7 +112,7 @@ export default class Container extends React.Component {
                         </div>
                         :
                         <div style={this.state.isHome ? footerTransparent : footerBackGround} > 
-                            {!!window.safari + ''}
+                            {this.state.isSafari + ''}
                         </div>
                 }
 
