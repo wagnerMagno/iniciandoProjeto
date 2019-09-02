@@ -13,13 +13,18 @@ const ContainerComponentStyled = styled.div`
     position: absolute;
     height: 100%;
     border-radius: 5px;
-    overflow: auto;
-
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch; 
     
     
     .background-transparent{
         background-color: transparent;
         margin-top : 1px sold white;
+    }
+
+    .classToSafari{
+        height: 2000px !important;
+        margin-top: -89% !important;
     }
 
     .home {

@@ -54,12 +54,14 @@ export default class Container extends React.Component {
             heightTotal: true,
             width: 0,
             height: 0,
-            isHome: false
+            isHome: false, 
+            isSafari : navigator.userAgent.split(' ')[0].toString().toLowerCase().indexOf("safari") > -1
         }
         this.props.setHome(this.state.isHome);
 
         this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
         this.setHome = this.setHome.bind(this);
+
     }
 
 
@@ -98,14 +100,18 @@ export default class Container extends React.Component {
 
         return (
             <div>
+               
 
                 {
                     window.innerWidth > 700 ?
                         <div style={this.state.isHome ? footerTransparent : footerBackGround} >
+
                             <FooterComponent />
                         </div>
                         :
-                       ''
+                        <div style={this.state.isHome ? footerTransparent : footerBackGround} > 
+                            {this.state.isSafari + ''}
+                        </div>
                 }
 
                 <ContainerComponentStyled className={this.props.className + " testeContainer"} style={this.state.heightTotal ? cssHeightTotal : cssHeigth}>
@@ -116,7 +122,7 @@ export default class Container extends React.Component {
                             render={() => {
                                 this.setHome(false);
                                 return (
-                                    <div style={{height: "2000px"}} className="link">
+                                    <div  className={"link " + ( this.state.isSafari ? 'classToSafari' : "")}>
                                         <SobreNosComponent />
                                     </div>
                                 )
