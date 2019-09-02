@@ -141,7 +141,8 @@ export default class Container extends React.Component {
                         :
                         <div style={this.state.isHome ? footerTransparent : footerBackGround} > 
                             {this.getBrowserInfo() + ''}
-                            {(this.getBrowserInfo() == 4 || this.getBrowserInfo() == 0 ) + ''}
+                            {(this.getBrowserInfo() == 4 || this.getBrowserInfo() == 0 ) + ' }}} '}
+                            {this.state.isSafari + ''}
                         </div>
                 }
 
