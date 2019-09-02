@@ -14,7 +14,6 @@ import IconCloseWhite from "./images/close-white.svg";
 import logo from "./images/logo.png";
 
 import { Link } from 'react-router-dom'
-import SobreNosComponent from './components/sobreNos/sobreNos';
 
 
 const icon = {
@@ -120,12 +119,9 @@ class App extends React.Component {
 
           }
         </div>
-        {/* <MenuComponent displayMenu={this.state.displayMenu} setRoute={this.setRoute} route={this.state.route} updateDisplayMenu={this.updateDisplayMenu} className={this.state.displayMenu} /> */}
-        {/* <VideoComponent /> */}
-        {/* <Container displayMenu={this.state.displayMenu} isHomeApp={this.state.isHome} setHome={(op) => this.setHome(op)} className={this.state.containerWidth} /> */}
-        <div  className={"link " + (true ? 'classToSafari' : "")}>
-          <SobreNosComponent />
-        </div>
+        <MenuComponent displayMenu={this.state.displayMenu} setRoute={this.setRoute} route={this.state.route} updateDisplayMenu={this.updateDisplayMenu} className={this.state.displayMenu} />
+        <VideoComponent style={{display: "none"}} />
+        <Container displayMenu={this.state.displayMenu} isHomeApp={this.state.isHome} setHome={(op) => this.setHome(op)} className={this.state.containerWidth} />
       </HashRouter>
     )
 

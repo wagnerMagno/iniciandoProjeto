@@ -147,7 +147,10 @@ export default class Container extends React.Component {
                 }
 
                 <ContainerComponentStyled className={this.props.className + " testeContainer"} style={this.state.heightTotal ? cssHeightTotal : cssHeigth}>
-                    <SwitchComponent >
+                <div  className={"link " + ( true  ? 'classToSafari' : "")}>
+                                        <SobreNosComponent />
+                                    </div>
+                    {/* <SwitchComponent >
 
                         <Route
                             path="/sobre-nos"
@@ -199,6 +202,7 @@ export default class Container extends React.Component {
                             }}
                         />
                     </SwitchComponent>
+                 */}
                 </ContainerComponentStyled>
 
             </div>
