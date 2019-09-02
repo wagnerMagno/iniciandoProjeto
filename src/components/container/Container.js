@@ -110,6 +110,8 @@ export default class Container extends React.Component {
                         </div>
                         :
                         <div style={this.state.isHome ? footerTransparent : footerBackGround} > 
+                            { navigator.appName + 'App name'}
+                            { navigator.userAgent + ''}
                             {this.state.isSafari + ''}
                         </div>
                 }
