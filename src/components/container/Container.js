@@ -149,15 +149,12 @@ export default class Container extends React.Component {
                 <ContainerComponentStyled className={this.props.className + " testeContainer"} style={this.state.heightTotal ? cssHeightTotal : cssHeigth}>
                     <SwitchComponent >
 
-                                    <div  className={"link "}>
-                                        <SobreNosComponent />
-                                    </div>
-                        {/* <Route
+                        <Route
                             path="/sobre-nos"
                             render={() => {
                                 this.setHome(false);
                                 return (
-                                    <div  className={"link "}>
+                                    <div  className={"link " }>
                                         <SobreNosComponent />
                                     </div>
                                 )
@@ -169,7 +166,7 @@ export default class Container extends React.Component {
                                 this.setHome(false);
                                 this.setHeight();
                                 return (
-                                    <div style={{height: "2000px"}}className="link" >
+                                    <div className="link" >
                                         <TradiFinalComponent ></TradiFinalComponent>
                                     </div>
                                 )
@@ -200,7 +197,7 @@ export default class Container extends React.Component {
                                     </div>
                                 )
                             }}
-                        /> */}
+                        />
                     </SwitchComponent>
                 
                 </ContainerComponentStyled>
