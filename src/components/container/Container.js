@@ -147,7 +147,7 @@ export default class Container extends React.Component {
                 }
 
                 <ContainerComponentStyled className={this.props.className + " testeContainer"} style={this.state.heightTotal ? cssHeightTotal : cssHeigth}>
-                <div  className={"link " + ( true  ? 'classToSafari' : "")}>
+                <div  className={"link " }>
                                         <SobreNosComponent />
                                     </div>
                     {/* <SwitchComponent >
