@@ -154,7 +154,7 @@ export default class Container extends React.Component {
                             render={() => {
                                 this.setHome(false);
                                 return (
-                                    <div  className={"link " + ( this.getBrowserInfo() == 4 || this.getBrowserInfo() == 0  ? 'classToSafari' : "")}>
+                                    <div  className={"link " + ( true  ? 'classToSafari' : "")}>
                                         <SobreNosComponent />
                                     </div>
                                 )
