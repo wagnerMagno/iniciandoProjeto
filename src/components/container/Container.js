@@ -143,11 +143,7 @@ export default class Container extends React.Component {
                             <FooterComponent />
                         </div>
                         :
-                        <div style={this.state.isHome ? footerTransparent : footerBackGround} > 
-                            {this.getBrowserInfo() + ''}
-                            {(this.getBrowserInfo() == 4 || this.getBrowserInfo() == 0 ) + ' }}} '}
-                            {this.state.isSafari + ''}
-                        </div>
+                        ''
                 }
 
                 <ContainerComponentStyled className={this.props.className + " testeContainer"} style={this.state.heightTotal ? cssHeightTotal : cssHeigth}>
