@@ -128,7 +128,7 @@ export default class Container extends React.Component {
                                 this.setHome(false);
                                 this.setHeight();
                                 return (
-                                    <div className="link" >
+                                    <div style={{height: "100%"}}className="link" >
                                         <TradiFinalComponent ></TradiFinalComponent>
                                     </div>
                                 )
