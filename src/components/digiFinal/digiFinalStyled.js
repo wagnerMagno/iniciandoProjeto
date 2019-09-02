@@ -107,7 +107,6 @@ const DigiFinalComponentStyled = styled.div`
         margin-bottom: 20px;
    }
 
-
    
    @media only screen and (max-width: 700px) {
         .div-img-title{

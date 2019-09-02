@@ -55,6 +55,7 @@ const TradiFinalComponentStyled = styled.div`
        .div-descricao{
            width: 80%;
            display: inline-block;
+           margin-top: -69px;
         }
 
        .img{
@@ -106,11 +107,17 @@ const TradiFinalComponentStyled = styled.div`
 
 
    
+   @media only screen and (min-width: 1600px) {
+    margin-top: -285px;
+
+}
+
    @media only screen and (max-width: 700px) {
         .div-img-title{
             margin-left: -6px;
             
             img{
+                
                 width: 92px;
             }
         }
@@ -119,8 +126,17 @@ const TradiFinalComponentStyled = styled.div`
             img{
                 width: 87px;
             }
+
+            .img{
+                margin-top: 66px;
+            }
      
         }
+
+        .div-descricao{
+            margin-top: -74px;
+        }
+
 
 
 

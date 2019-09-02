@@ -19,6 +19,10 @@ const cssHeightTotal = {
     height: "100%"
 }
 
+const minHeight = {
+    minHeight : window.innerHeight,
+}
+
 const footerBackGround = {
     position: "absolute",
     zIndex: "3",
@@ -166,7 +170,7 @@ export default class Container extends React.Component {
                                 this.setHome(false);
                                 this.setHeight();
                                 return (
-                                    <div className="link" >
+                                    <div style={minHeight} className="link" >
                                         <TradiFinalComponent ></TradiFinalComponent>
                                     </div>
                                 )
