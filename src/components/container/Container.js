@@ -55,7 +55,7 @@ export default class Container extends React.Component {
             width: 0,
             height: 0,
             isHome: false, 
-            isSafari : navigator.userAgent.split(' ')[0].toString().toLowerCase().indexOf("safari") > -1
+            isSafari : !!window.safari
         }
         this.props.setHome(this.state.isHome);
 
@@ -110,9 +110,7 @@ export default class Container extends React.Component {
                         </div>
                         :
                         <div style={this.state.isHome ? footerTransparent : footerBackGround} > 
-                            { navigator.appName + 'App name'}
-                            { navigator.userAgent + ''}
-                            {this.state.isSafari + ''}
+                            {!!window.safari + ''}
                         </div>
                 }
 
