@@ -59,9 +59,9 @@ const animateSwitch = (CustomSwitch, AnimatorComponent) => ({
 }) => (
   <Route
     render={({ location }) => (
-      <AnimatorComponent uniqKey={location.pathname} updateStep={updateStep}>
+      // <AnimatorComponent uniqKey={location.pathname} updateStep={updateStep}>
         <CustomSwitch location={location}>{children}</CustomSwitch>
-      </AnimatorComponent>
+      // </AnimatorComponent>
     )}
   />
 );
