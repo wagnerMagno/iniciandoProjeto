@@ -147,17 +147,17 @@ export default class Container extends React.Component {
                 }
 
                 <ContainerComponentStyled className={this.props.className + " testeContainer"} style={this.state.heightTotal ? cssHeightTotal : cssHeigth}>
-                <div  className={"link " }>
+                    <SwitchComponent >
+
+                                    <div  className={"link "}>
                                         <SobreNosComponent />
                                     </div>
-                    {/* <SwitchComponent >
-
-                        <Route
+                        {/* <Route
                             path="/sobre-nos"
                             render={() => {
                                 this.setHome(false);
                                 return (
-                                    <div  className={"link " + ( true  ? 'classToSafari' : "")}>
+                                    <div  className={"link "}>
                                         <SobreNosComponent />
                                     </div>
                                 )
@@ -200,9 +200,9 @@ export default class Container extends React.Component {
                                     </div>
                                 )
                             }}
-                        />
+                        /> */}
                     </SwitchComponent>
-                 */}
+                
                 </ContainerComponentStyled>
 
             </div>
