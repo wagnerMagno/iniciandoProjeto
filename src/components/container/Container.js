@@ -62,8 +62,36 @@ export default class Container extends React.Component {
         this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
         this.setHome = this.setHome.bind(this);
 
-        console.log("Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0 wag ", Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0);
+        console.log("getBrowserInfo ", this.getBrowserInfo());
 
+    }
+
+    getBrowserInfo() {
+        var isOpera = !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
+       
+        var isFirefox = typeof InstallTrigger !== 'undefined';   // Firefox 1.0+
+        var isSafari = Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0;
+       
+        var isChrome = !!window.chrome && !isOpera;              // Chrome 1+
+        var isIE = /*@cc_on!@*/false || !!document.documentMode;   // At least IE6
+        if (isOpera) {
+            return 1;
+        }
+        else if (isFirefox) {
+            return 2;
+        }
+        else if (isChrome) {
+            return 3;
+        }
+        else if (isSafari) {
+            return 4;
+        }
+        else if (isIE) {
+            return 5;
+        }
+        else {
+            return 0;
+        }
     }
 
 
@@ -112,7 +140,8 @@ export default class Container extends React.Component {
                         </div>
                         :
                         <div style={this.state.isHome ? footerTransparent : footerBackGround} > 
-                            {this.state.isSafari + ''}
+                            {this.getBrowserInfo() + ''}
+                            {(this.getBrowserInfo() == 4 || this.getBrowserInfo() == 0 ) + ''}
                         </div>
                 }
 
@@ -124,7 +153,7 @@ export default class Container extends React.Component {
                             render={() => {
                                 this.setHome(false);
                                 return (
-                                    <div  className={"link " + ( this.state.isSafari ? 'classToSafari' : "")}>
+                                    <div  className={"link " + ( this.getBrowserInfo() == 4 || this.getBrowserInfo() == 0  ? 'classToSafari' : "")}>
                                         <SobreNosComponent />
                                     </div>
                                 )
