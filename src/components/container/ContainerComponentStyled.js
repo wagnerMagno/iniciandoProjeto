@@ -64,7 +64,6 @@ const ContainerComponentStyled = styled.div`
     }
     
     .animatable{
-        height: 100%;
     
     }
     
